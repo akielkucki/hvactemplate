@@ -106,7 +106,7 @@ const Navbar = () => {
         >
           <span
               className={`block w-7 h-0.5 bg-white transition-all duration-300 ease-out ${
-                  isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'
+                  isMenuOpen ? 'rotate-45 translate-y-0.5' : '-translate-y-2'
               }`}
           />
             <span
@@ -116,7 +116,7 @@ const Navbar = () => {
             />
             <span
                 className={`block w-7 h-0.5 bg-white transition-all duration-300 ease-out ${
-                    isMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-2'
+                    isMenuOpen ? '-rotate-45 translate-y-[-1px]' : 'translate-y-2'
                 }`}
             />
         </button>
@@ -127,9 +127,9 @@ const Navbar = () => {
         <div className="fixed flex items-center justify-center inset-0 z-40 md:hidden">
             {/* Background Overlay */}
             <div
-                className={`absolute inset-0 bg-black/95 backdrop-blur-md transition-opacity duration-300 ${
-                    isAnimating ? 'opacity-0' : 'opacity-100'
-                }`}
+                className={`absolute inset-0 bg-black/95 backdrop-blur-md transition-opacity opacity-0 duration-300 ${
+                    isAnimating ? 'opacity-100' : 'opacity-100'
+                } ${isMenuOpen && 'opacity-100'}`}
                 onClick={handleMenuToggle}
             />
 

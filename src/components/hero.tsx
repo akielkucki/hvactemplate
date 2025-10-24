@@ -85,7 +85,7 @@ const Hero = () => {
     </div>
 
 {/* Mobile Contact Form - Shows below hero on mobile */}
-    <div className="block lg:hidden w-full mt-8">
+    <div className="flex overflow-hidden min-w-full lg:hidden mt-8">
         <ContactForm />
     </div>
 </section>

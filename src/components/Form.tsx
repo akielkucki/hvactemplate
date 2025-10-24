@@ -47,10 +47,10 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="min-w-sm w-full max-w-xl mx-auto bg-white rounded-2xl shadow-lg p-5">
+        <div className="min-w-[100%] w-full mx-auto bg-white rounded-2xl shadow-lg p-5">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
 
-            <form onSubmit={handleSubmit} className="space-y-6 text-black">
+            <form onSubmit={handleSubmit} className="space-y-6 text-black min-w-full">
                 {/* Name Field */}
                 <div>
                     <label

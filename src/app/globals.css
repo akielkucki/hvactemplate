@@ -1,15 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #FFFFFF;
+  --secondary-color: #0B6ECC;
+  --accent-color: #FF5E15;
 }
+@font-face {
+  font-family: "Magazine";
+  src: url("/LibreFranklin.ttf");
 
+}
+* {
+  font-family: "Magazine", sans-serif;
+}
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-accent: var(--accent-color);
+}
+.font-classy {
+  font-family: SimSun, sans-serif;
+}
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.bg-accent {
+  background-color: var(--accent-color);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+.text-accent {
+  color: var(--accent-color);
+}
+@theme {
+  --animate-fade: fadeIn 0.15s ease-in-out forwards; /* Capital F must match the keyframes name */
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.85) translateY(-10px); /* "scale" is not a valid CSS property by itself */
+
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      y: 20px;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {

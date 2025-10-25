@@ -7,7 +7,7 @@ import Navbar from "@/components/navbar";
 const Hero = () => {
     const {logo,phone} = brand;
     return (
-        <div className="relative w-full min-h-screen">
+        <div className="relative w-full min-h-screen" id={"home"}>
             {/* Navigation Bar */}
             <Navbar />
 
@@ -44,13 +44,13 @@ const Hero = () => {
 
                     {/* Main Heading */}
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
-                        Building Dreams Delivering Excellence
+                        Restoring Comfort. Delivering Reliability.
                     </h1>
 
                     {/* Company Description */}
                     <div className="mb-6 sm:mb-8 max-w-2xl">
                         <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-                            JNR Contracting is a family-owned and operated construction company that has been serving the Strathroy Area for over 20 years. We specialize in residential and commercial construction, and we pride ourselves on our commitment to quality, integrity, and customer satisfaction.
+                            {`${brand.name} provides expert heating and cooling solutions across ${brand.area}. Whether your system breaks down or you need an upgrade, our certified HVAC specialists deliver fast, reliable service that's always done right the first time.`}
                         </p>
                     </div>
 

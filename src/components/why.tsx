@@ -59,7 +59,7 @@ export default function LegacySection() {
     ];
     const {phone} = brand;
     return (
-        <section className="bg-gradient-to-br from-orange-50 via-white to-orange-50 py-20 px-4 sm:px-6 lg:px-8 h-screen flex items-center">
+        <section className="bg-gradient-to-br from-gradient to-primary py-20 px-4 sm:px-6 lg:px-8 h-screen flex items-center" id={"why"}>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Side - Content */}
@@ -92,7 +92,7 @@ export default function LegacySection() {
                             variants={fadeInUp}
                             className="text-gray-600 text-lg leading-relaxed"
                         >
-                            At Aireco, we believe in delivering more than cooling solutions – we offer peace of mind. With years of experience, a team of highly skilled technicians, a commitment to customer satisfaction.
+                            At {brand.name}, we believe in delivering more than cooling solutions – we offer peace of mind. With years of experience, a team of highly skilled technicians, a commitment to customer satisfaction.
                         </motion.p>
 
                         {/* Features Grid */}

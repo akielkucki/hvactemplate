@@ -34,19 +34,21 @@ const Navbar = () => {
         }
     };
 
-    const handleLinkClick = () => {
+    const handleLinkClick = (link: string | null) => {
         setIsAnimating(true);
         setTimeout(() => {
             setIsMenuOpen(false);
             setIsAnimating(false);
         }, 600);
+        if (link === null) return;
+        document.querySelector(link)?.scrollIntoView({behavior: "smooth",  block: "center" });
     };
 
     const navLinks = [
-        { href: "#services", text: "SERVICES" },
         { href: "#about", text: "ABOUT" },
+        { href: "#why", text: "WHY US" },
         { href: "#projects", text: "PROJECTS" },
-        { href: "#area", text: "AREA" },
+        { href: "#process", text: "PROCESS" },
     ];
 
     return (
@@ -82,13 +84,13 @@ const Navbar = () => {
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center gap-8">
                 {navLinks.map((link) => (
-                    <a
+                    <button
                     key={link.href}
-                    href={link.href}
-                    className="text-white hover:text-accent transition-colors font-medium text-sm"
+                    onClick={() => handleLinkClick(link.href)}
+                    className="text-white hover:text-accent transition-colors font-medium text-sm cursor-pointer"
                     >
                 {link.text}
-                    </a>
+                    </button>
                     ))}
                 <a
                 href={`tel:${phone.url}`}
@@ -136,11 +138,10 @@ const Navbar = () => {
             {/* Menu Content */}
             <div className="relative h-full flex flex-col items-center justify-center px-8">
                 {navLinks.map((link, index) => (
-                <a
+                <button
                     key={link.href}
-                    href={link.href}
-                    onClick={handleLinkClick}
-                    className={`text-white text-3xl font-bold mb-8 transition-all duration-500 hover:text-accent ${
+                    onClick={()=>handleLinkClick(link.href)}
+                    className={`text-white cursor-pointer text-3xl font-bold mb-8 transition-all duration-500 hover:text-accent ${
                     isAnimating
                     ? 'opacity-0 transform translate-y-4'
                     : 'opacity-100 transform translate-y-0'
@@ -152,13 +153,13 @@ const Navbar = () => {
                 }}
                     >
                 {link.text}
-                    </a>
+                    </button>
                     ))}
 
                 {/* Phone CTA */}
                 <a
                 href={`tel:${phone.url}`}
-                onClick={handleLinkClick}
+                onClick={()=>handleLinkClick(null)}
                 className={`bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-4 rounded-lg text-xl transition-all duration-500 mt-8 ${
                 isAnimating
                     ? 'opacity-0 transform translate-y-4'

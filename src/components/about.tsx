@@ -33,7 +33,7 @@ export default function AboutSection() {
     });
     const {years,phone} = brand;
     return (
-        <section className="bg-gradient-to-br from-orange-100 to-primary py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-gradient to-primary py-16 px-4 sm:px-6 lg:px-8" id={"about"}>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Side - Images */}

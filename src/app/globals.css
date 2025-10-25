@@ -4,6 +4,7 @@
   --primary-color: #FFFFFF;
   --secondary-color: #0B6ECC;
   --accent-color: #FF5E15;
+  --gradient-color: oklch(98% 0.016 73.684);
 }
 @font-face {
   font-family: "Magazine";
@@ -17,6 +18,7 @@
   --color-primary: var(--primary-color);
   --color-secondary: var(--secondary-color);
   --color-accent: var(--accent-color);
+  --color-gradient: var(--gradient-color);
 }
 .font-classy {
   font-family: SimSun, sans-serif;

@@ -3,7 +3,7 @@ import {brand} from "@/lib/info";
 export default function Footer() {
     const {logo,phone,name} = brand;
     return (
-        <footer className="bg-neutral-900 text-white">
+        <footer className="bg-neutral-900 text-white" id={"footer"}>
             {/* Main Footer Content */}
             <div className="max-w-7xl mx-auto px-8 md:px-16 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -26,8 +26,8 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-sm font-semibold tracking-wider text-accent">QUICK LINKS</h3>
                         <nav className="flex flex-col gap-3">
-                            <a href="#services" className="text-neutral-400 hover:text-white transition-colors text-sm">
-                                Services
+                            <a href="#why" className="text-neutral-400 hover:text-white transition-colors text-sm">
+                                Why Us
                             </a>
                             <a href="#about" className="text-neutral-400 hover:text-white transition-colors text-sm">
                                 About
@@ -35,8 +35,8 @@ export default function Footer() {
                             <a href="#projects" className="text-neutral-400 hover:text-white transition-colors text-sm">
                                 Projects
                             </a>
-                            <a href="#area" className="text-neutral-400 hover:text-white transition-colors text-sm">
-                                Service Area
+                            <a href="#process" className="text-neutral-400 hover:text-white transition-colors text-sm">
+                                The Process
                             </a>
                         </nav>
                     </div>
@@ -52,7 +52,7 @@ export default function Footer() {
                                 info@{name.toLowerCase().replace(/\s+/g, '')}.com
                             </a>
                             <p className="text-neutral-400">
-                                San Diego, CA
+                                {brand.address}
                             </p>
                         </div>
                     </div>

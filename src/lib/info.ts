@@ -14,10 +14,13 @@ export const brand = {
     },
     years: 17,
     reviews: 14,
+    area: "Bucks County",
+    address: "Doylestown, PA",
     phone: {
         url: "+12154895339",
         display: "(215) 489-5339"
     },
+
     stats: [
         {
             number: 14,

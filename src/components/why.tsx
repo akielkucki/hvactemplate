@@ -146,26 +146,29 @@ export default function LegacySection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative h-full"
+                        className="relative h-full max-w-full"
                     >
 
                         {/* Main Image Container */}
                         <div className="relative h-full w-full max-w-md md:flex hidden">
 
-                            <div className="aspect-[2/3] relative z-20 grid grid-cols-2 gap-4 w-full h-full ">
-                                <Image
-                                    src="/hvacworkers.jpeg"
-                                    alt="HVAC Technician Working"
-                                    fill
-                                    className="object-cover rounded-3xl shadow-2xl"
-                                />
-                                <Image
-                                    src="/hvac.jpeg"
-                                    alt="HVAC Professional"
-                                    fill
-                                    className="object-cover translate-x-[110%] -translate-y-1/3 rounded-3xl shadow-2xl"
-
-                                />
+                            <div className="relative z-20 grid grid-cols-2 gap-4 w-full aspect-[2/3]">
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src="/hvacworkers.jpeg"
+                                        alt="HVAC Technician Working"
+                                        fill
+                                        className="object-cover rounded-3xl shadow-2xl"
+                                    />
+                                </div>
+                                <div className="relative w-full h-full translate-x-[10%] -translate-y-[15%]">
+                                    <Image
+                                        src="/hvac.jpeg"
+                                        alt="HVAC Professional"
+                                        fill
+                                        className="object-cover rounded-3xl shadow-2xl"
+                                    />
+                                </div>
                             </div>
 
                             {/* Stats Badge - Top Right */}
@@ -181,7 +184,6 @@ export default function LegacySection() {
                                     Air Conditioning Happy Customer
                                 </div>
                             </motion.div>
-
 
                         </div>
                     </motion.div>

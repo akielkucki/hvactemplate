@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import {brand} from "@/lib/info";
+import {useEffect, useMemo, useState} from "react";
 
 export default function AboutSection() {
     const fadeInUp = {
@@ -53,7 +54,7 @@ export default function AboutSection() {
                             >
                                 <div className="relative antialiased aspect-[15/15] bg-gradient-to-br from-accent/20 to-accent/40 overflow-hidden">
                                     <Image
-                                        src="/hvactech.jpeg"
+                                        src="/static/about/plumber1.png"
                                         alt="HVAC workers"
                                         fill
                                         className="object-cover antialiased"
@@ -149,7 +150,7 @@ export default function AboutSection() {
                         {/* Additional Description l*/}
                         {/* Bottom Right Circular Image */}
                         <div className={"flex items-center md:flex-row flex-col gap-2"}>
-                            <HexImage src={"/hvacguy.jpeg"} size={240} radius={600} />
+                            <HexImage src={"/static/about/plumber2.png"} size={240} radius={600} imageTop={165} />
                             <motion.p
                                 className="text-gray-600 leading-relaxed"
                                 variants={fadeInUp}
@@ -185,7 +186,7 @@ export default function AboutSection() {
         </section>
     );
 }
-const HexImage = ({ src, size = 300, radius = 100 }: { src: string; size?: number; radius?: number }) => {
+const HexImage = ({ src, size = 300, radius = 100, imageTop=0 }: { src: string; size?: number; radius?: number; imageTop?: number }) => {
     const points = Array.from({ length: 6 }, (_, i) => {
         const angle = (Math.PI / 3) * i;
         return {
@@ -200,46 +201,50 @@ const HexImage = ({ src, size = 300, radius = 100 }: { src: string; size?: numbe
     const viewBoxSize = (radius * 2) + (padding * 2);
     const center = viewBoxSize / 2;
 
-    // Create path with rounded corners
-    const createRoundedPath = () => {
-        const cornerRadius = 50; // Adjust this value for more/less rounding
-        let path = '';
+    const [roundedPath, setRoundedPath] = useState<string>('');
+    useEffect(() => {
+        function createRoundedPath() {
+            const points = Array.from({ length: 6 }, (_, i) => {
+                const angle = (Math.PI / 3) * i;
+                return { x: Math.cos(angle) * radius, y: Math.sin(angle) * radius };
+            });
 
-        for (let i = 0; i < points.length; i++) {
-            const current = points[i];
-            const next = points[(i + 1) % points.length];
-            const prev = points[(i - 1 + points.length) % points.length];
+            const cornerRadius = 50;
+            let path = "";
 
-            // Calculate direction vectors
-            const dx1 = current.x - prev.x;
-            const dy1 = current.y - prev.y;
-            const len1 = Math.sqrt(dx1 * dx1 + dy1 * dy1);
+            for (let i = 0; i < points.length; i++) {
+                const current = points[i];
+                const next = points[(i + 1) % points.length];
+                const prev = points[(i - 1 + points.length) % points.length];
 
-            const dx2 = next.x - current.x;
-            const dy2 = next.y - current.y;
-            const len2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
+                const dx1 = current.x - prev.x;
+                const dy1 = current.y - prev.y;
+                const len1 = Math.hypot(dx1, dy1);
 
-            // Calculate points before and after corner
-            const beforeX = current.x - (dx1 / len1) * cornerRadius;
-            const beforeY = current.y - (dy1 / len1) * cornerRadius;
-            const afterX = current.x + (dx2 / len2) * cornerRadius;
-            const afterY = current.y + (dy2 / len2) * cornerRadius;
+                const dx2 = next.x - current.x;
+                const dy2 = next.y - current.y;
+                const len2 = Math.hypot(dx2, dy2);
 
-            if (i === 0) {
-                path += `M ${center + beforeX} ${center + beforeY} `;
-            } else {
-                path += `L ${center + beforeX} ${center + beforeY} `;
+                const beforeX = current.x - (dx1 / len1) * cornerRadius;
+                const beforeY = current.y - (dy1 / len1) * cornerRadius;
+                const afterX = current.x + (dx2 / len2) * cornerRadius;
+                const afterY = current.y + (dy2 / len2) * cornerRadius;
+
+                if (i === 0) {
+                    path += `M ${center + beforeX} ${center + beforeY} `;
+                } else {
+                    path += `L ${center + beforeX} ${center + beforeY} `;
+                }
+
+                path += `Q ${center + current.x} ${center + current.y} ${center + afterX} ${center + afterY} `;
             }
 
-            // Add quadratic curve for rounded corner
-            path += `Q ${center + current.x} ${center + current.y} ${center + afterX} ${center + afterY} `;
+            return path + "Z";
         }
+        setRoundedPath(createRoundedPath());
 
-        path += 'Z';
-        return path;
-    };
+    }, []);
 
-    const roundedPath = createRoundedPath();
 
     return (
         <svg
@@ -256,12 +261,12 @@ const HexImage = ({ src, size = 300, radius = 100 }: { src: string; size?: numbe
             <image
                 href={src}
                 x={center - radius * 1.5}
-                y={center - radius * 1.5}
+                y={center - (radius * 1.5)+imageTop}
                 width={radius * 3}
                 height={radius * 3}
                 clipPath="url(#hexClip)"
                 preserveAspectRatio="slice"
-                className="object-contain object-right"
+                className="object-contain object-bottom"
             />
             <path
                 d={roundedPath}

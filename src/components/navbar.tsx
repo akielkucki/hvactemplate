@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import Image from "next/image";
 import { brand } from "@/lib/info";
 
@@ -56,13 +56,14 @@ const Navbar = () => {
         <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-6">
             {/* Logo */}
             <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded flex items-center justify-center">
+                <div className=" rounded flex items-center justify-center">
                     {!logo.hasText ? (
                         <Image
                             src={logo.src}
                             alt={logo.alt}
-                            width={20}
-                            height={20}
+                            width={64}
+                            height={64}
+                            className="object-cover h-full w-full"
                         />
                     ) : (
                         <div className="relative inline-flex items-center justify-center group">

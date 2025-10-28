@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from "@/components/Form";
+import ContactForm from "@/components/form";
 import {brand} from "@/lib/info";
 import Image from "next/image";
 import Navbar from "@/components/navbar";
@@ -14,11 +14,11 @@ const Hero = () => {
             {/* Background Image with Dark Overlay */}
             <div className="fixed inset-0 -z-10">
                 <div
-                    style={{ backgroundImage: `url('/hvac.jpeg')` }}
+                    style={{ backgroundImage: `url('/static/hero/Main.jpeg')` }}
                     className="absolute inset-0 bg-cover bg-center"
                 />
                 {/* Dark overlay for better text visibility */}
-                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-0 bg-black/45 backdrop-blur-xs" />
             </div>
 
             {/* Hero Section */}

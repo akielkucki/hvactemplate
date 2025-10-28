@@ -6,6 +6,7 @@ import Offer from "@/components/offer";
 import Footer from "@/components/footer";
 import ProcessSection from "@/components/theprocess";
 import ProjectsSection from "@/components/projects";
+import ContactForm from "@/components/contact";
 
 export default function Home() {
     return (
@@ -17,6 +18,8 @@ export default function Home() {
             <ProjectsSection/>
             <ProcessSection/>
             <Offer/>
+            <ContactForm/>
+
             <Footer/>
         </>
     );

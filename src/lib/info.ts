@@ -5,20 +5,20 @@ interface Testimonial {
     image?: string;
 }
 export const brand = {
-    name: "G.W. Acker Heating & Cooling",
+    name: "Jeff Bass Plumbing",
     logo: {
-        src: "",
-        alt: "",
-        hasText: true,
+        src: "/static/logo/img.png",
+        alt: "Jeff Bass Plumbing logo",
+        hasText: false,
         logoText: "GW"
     },
     years: 17,
     reviews: 14,
     area: "Bucks County",
-    address: "Doylestown, PA",
+    address: "Warminster, PA",
     phone: {
         url: "+12154895339",
-        display: "(215) 489-5339"
+        display: "(267) 549-1184"
     },
 
     stats: [

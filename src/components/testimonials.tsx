@@ -70,7 +70,7 @@ export default function TestimonialsSection() {
                     </h2>
 
                     <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                        Don't just take our word for it. Here's what our satisfied customers have to say about their experience with our HVAC services.
+                        Don't just take our word for it. Here's what our satisfied customers have to say about their experience with our Plumbing services.
                     </p>
                 </motion.div>
 

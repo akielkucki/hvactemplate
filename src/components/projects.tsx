@@ -18,7 +18,7 @@ const ProjectsSection: React.FC = () => {
             description:
                 "Full plumbing system installation for a 50,000 sq ft office complex, including water supply, drainage, and high-efficiency fixtures.",
             category: "Commercial",
-            image: "/projects/2.jpg", // Replace with your actual image paths
+            image: "/projects/1.jpg", // Replace with your actual image paths
         },
         {
             id: 2,
@@ -26,7 +26,7 @@ const ProjectsSection: React.FC = () => {
             description:
                 "Complete bathroom plumbing upgrade for a luxury home, featuring new piping, fixtures, and water-efficient systems.",
             category: "Residential",
-            image: "/projects/1.jpg",
+            image: "/projects/2.jpg",
         },
         {
             id: 3,

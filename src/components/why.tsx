@@ -156,7 +156,7 @@ export default function LegacySection() {
                                 <div className="relative mt-16 md:mt-20 lg:mt-24">
                                     <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
                                         <Image
-                                            src="/hvacworkers.jpeg"
+                                            src="/static/why/plumber2.jpg"
                                             alt="HVAC Technician Working"
                                             fill
                                             className="object-cover hover:scale-105 transition-transform duration-500"
@@ -168,7 +168,7 @@ export default function LegacySection() {
                                 <div className="relative">
                                     <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
                                         <Image
-                                            src="/hvac.jpeg"
+                                            src="/static/why/plumber1.jpg"
                                             alt="HVAC Professional"
                                             fill
                                             className="object-cover hover:scale-105 transition-transform duration-500"

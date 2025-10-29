@@ -14,29 +14,33 @@ const ProjectsSection: React.FC = () => {
     const projects: Project[] = [
         {
             id: 1,
-            title: "Commercial HVAC Installation",
-            description: "Complete HVAC system installation for a 50,000 sq ft office building with energy-efficient climate control.",
+            title: "Commercial Plumbing Installation",
+            description:
+                "Full plumbing system installation for a 50,000 sq ft office complex, including water supply, drainage, and high-efficiency fixtures.",
             category: "Commercial",
-            image: "/projects/2.jpg" // Replace with your actual image paths
+            image: "/projects/2.jpg", // Replace with your actual image paths
         },
         {
             id: 2,
-            title: "Residential Cooling System",
-            description: "Modern air conditioning system upgrade for luxury residential property with smart thermostat integration.",
+            title: "Residential Bathroom Remodel",
+            description:
+                "Complete bathroom plumbing upgrade for a luxury home, featuring new piping, fixtures, and water-efficient systems.",
             category: "Residential",
-            image: "/projects/1.jpg"
+            image: "/projects/1.jpg",
         },
         {
             id: 3,
-            title: "Industrial Ventilation",
-            description: "Large-scale ventilation system for manufacturing facility ensuring optimal air quality and temperature.",
+            title: "Industrial Pipe Replacement",
+            description:
+                "Large-scale pipe replacement for a manufacturing facility to ensure consistent water flow and minimize downtime.",
             category: "Industrial",
-            image: "/projects/3.jpg"
-        }
+            image: "/projects/3.jpg",
+        },
     ];
 
+
     return (
-        <section className="py-16 px-4 bg-gradient-to-tr from-gradient to-primary" id={"projects"}>
+        <section className="py-16 px-4 bg-orange-100" id={"projects"}>
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">

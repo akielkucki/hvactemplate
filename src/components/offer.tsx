@@ -3,7 +3,7 @@ import {brand} from "@/lib/info";
 export default function Offer() {
     const {name} = brand;
     return (
-        <section className="py-32 flex justify-center items-center bg-gradient-to-bl from-gradient to-primary" id={"offer"}>
+        <section className="py-32 flex justify-center items-center bg-orange-100 to-primary" id={"offer"}>
             <div className="max-w-4xl px-6 text-center space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-4xl md:text-5xl font-light tracking-tight text-neutral-800">

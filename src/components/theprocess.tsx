@@ -76,7 +76,7 @@ export default function ProcessSection() {
     };
 
     return (
-        <section className="bg-secondary py-20 px-4 sm:px-6 lg:px-8" id={"process"}>
+        <section className="bg-gradient-to-br from-primary to-gradient py-20 px-4 sm:px-6 lg:px-8 " id={"process"}>
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -87,7 +87,7 @@ export default function ProcessSection() {
                     className="text-center mb-16"
                 >
                     <motion.div
-                        className="inline-flex items-center gap-2 text-white/90 font-semibold mb-4"
+                        className="inline-flex items-center gap-2 text-black/90 font-semibold mb-4"
                         whileHover={{ x: 5 }}
                     >
                         <div className="w-8 h-0.5 bg-white/90"></div>
@@ -95,13 +95,13 @@ export default function ProcessSection() {
                         <div className="w-8 h-0.5 bg-white/90"></div>
                     </motion.div>
 
-                    <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
                         A Simple & Hassle-Free Process
                     </h2>
 
-                    <p className="text-white/80 text-lg max-w-3xl mx-auto">
-                        At {brand.name}, we make heating and cooling services easy, efficient, & stress-free.
-                        Whether you need an installation, repair, or maintenance, we've streamlined our process.
+                    <p className="text-black/80 text-lg max-w-3xl mx-auto">
+                        At {brand.name}, we make plumbing services easy, efficient, and stress-free.
+                        Whether you need a repair, installation, or routine maintenance, our process is streamlined to get your water flowing smoothly with minimal disruption.
                     </p>
                 </motion.div>
 

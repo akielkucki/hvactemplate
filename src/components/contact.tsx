@@ -290,7 +290,7 @@ const ContactForm = () => {
                             <button
                                 onClick={handleSubmit}
                                 disabled={isSubmitting}
-                                className="w-full bg-[#0B6ECC] text-white py-4 px-6 rounded-xl font-bold text-lg  transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                                className="w-full bg-accent text-white py-4 px-6 rounded-xl font-bold text-lg  transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                             >
                                 {isSubmitting ? (
                                     <>

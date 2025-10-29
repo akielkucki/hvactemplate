@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
     };
 
     return (
-        <section className="bg-gradient-to-tr to-primary from-gradient py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="bg-orange-100 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -144,10 +144,10 @@ export default function TestimonialsSection() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={prevTestimonials}
-                        className="w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all duration-300 group"
+                        className="w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-accent hover:bg-accent hover:text-white  transition-all duration-300 group"
                         aria-label="Previous testimonials"
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 group-hover:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
                     </motion.button>
@@ -175,7 +175,7 @@ export default function TestimonialsSection() {
                         className="w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all duration-300 group"
                         aria-label="Next testimonials"
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 group-hover:stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                     </motion.button>

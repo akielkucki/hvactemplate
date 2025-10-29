@@ -18,7 +18,7 @@ export default function Footer() {
                             <span className="text-xl font-bold">{name}</span>
                         </div>
                         <p className="text-neutral-400 text-sm leading-relaxed">
-                            Professional HVAC services you can trust. Comfort delivered, guaranteed.
+                            Professional plumbing services you can trust. Reliable flow, guaranteed.
                         </p>
                     </div>
 

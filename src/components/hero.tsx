@@ -25,7 +25,7 @@ const Hero = () => {
             <section className="relative z-10 flex flex-col lg:flex-row justify-between items-start w-full min-h-screen px-4 sm:px-6 md:px-8 lg:px-16 pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12">
 
                 {/* Left Side - Hero Content */}
-                <div className="w-full lg:flex-1 lg:max-w-3xl flex flex-col justify-end min-h-[calc(100vh-8rem)] ">
+                <div className="w-full lg:flex-1 lg:max-w-5xl flex flex-col justify-end min-h-[calc(100vh-8rem)] ">
 
                     {/* Google Reviews Badge */}
                     <div className="flex flex-row sm:flex-row items-center sm:items-center gap-2 mb-4 sm:mb-6">
@@ -44,14 +44,13 @@ const Hero = () => {
 
                     {/* Main Heading */}
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
-                        Restoring Comfort. Delivering Reliability.
+                        Stop Paying for <br/><span className={"text-accent"}>‘Quick Fixes.’</span> We Build Plumbing Systems That Outlast the House.
                     </h1>
 
                     {/* Company Description */}
                     <div className="mb-6 sm:mb-8 max-w-2xl">
                         <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-                            {`${brand.name} provides expert heating and cooling solutions across ${brand.area}. Whether your system breaks down or you need an upgrade, our certified HVAC specialists deliver fast, reliable service that's always done right the first time.`}
-                        </p>
+                            {`${brand.name} provides expert plumbing solutions across ${brand.area}. Whether you’re dealing with a leak, clog, or need a full system upgrade, our certified plumbers deliver fast, reliable service done right the first time.`}                        </p>
                     </div>
 
                     {/* Stats */}

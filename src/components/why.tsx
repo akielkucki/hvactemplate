@@ -59,8 +59,8 @@ export default function LegacySection() {
     ];
     const {phone} = brand;
     return (
-        <section className="bg-gradient-to-br from-gradient to-primary py-20 px-4 sm:px-6 lg:px-8 h-screen flex items-center" id={"why"}>
-            <div className="max-w-7xl mx-auto">
+        <section className="bg-gradient-to-br from-gradient to-primary py-20 px-4 sm:px-6 lg:px-8 flex items-center" id={"why"}>
+            <div className="max-w-[90rem] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Side - Content */}
                     <motion.div
@@ -84,7 +84,7 @@ export default function LegacySection() {
                             variants={fadeInUp}
                             className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight"
                         >
-                            A Legacy of Excellence in Heating And Cooling
+                            A Legacy of Excellence in Plumbing
                         </motion.h2>
 
                         {/* Description */}
@@ -92,7 +92,7 @@ export default function LegacySection() {
                             variants={fadeInUp}
                             className="text-gray-600 text-lg leading-relaxed"
                         >
-                            At {brand.name}, we believe in delivering more than cooling solutions – we offer peace of mind. With years of experience, a team of highly skilled technicians, a commitment to customer satisfaction.
+                            At {brand.name}, we believe in delivering more than plumbing solutions — we provide peace of mind. With years of hands-on experience, a team of skilled plumbers, and an unwavering commitment to customer satisfaction, we ensure every job is done right — the first time.
                         </motion.p>
 
                         {/* Features Grid */}
@@ -140,51 +140,56 @@ export default function LegacySection() {
                         </motion.div>
                     </motion.div>
 
-                    {/* Right Side - Images */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="relative h-full max-w-full"
+                        className="relative h-full w-full"
                     >
+                        {/* Image Grid Container */}
+                        <div className="relative w-full max-w-2xl mx-auto">
+                            {/* Two Column Grid with Gap */}
+                            <div className="grid grid-cols-2 gap-6 md:gap-8">
 
-                        {/* Main Image Container */}
-                        <div className="relative h-full w-full max-w-md md:flex hidden">
-
-                            <div className="relative z-20 grid grid-cols-2 gap-4 w-full aspect-[2/3]">
-                                <div className="relative w-full h-full">
-                                    <Image
-                                        src="/hvacworkers.jpeg"
-                                        alt="HVAC Technician Working"
-                                        fill
-                                        className="object-cover rounded-3xl shadow-2xl"
-                                    />
+                                {/* Left Image - Taller and Lower */}
+                                <div className="relative mt-16 md:mt-20 lg:mt-24">
+                                    <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                                        <Image
+                                            src="/hvacworkers.jpeg"
+                                            alt="HVAC Technician Working"
+                                            fill
+                                            className="object-cover hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
                                 </div>
-                                <div className="relative w-full h-full translate-x-[10%] -translate-y-[15%]">
-                                    <Image
-                                        src="/hvac.jpeg"
-                                        alt="HVAC Professional"
-                                        fill
-                                        className="object-cover rounded-3xl shadow-2xl"
-                                    />
+
+                                {/* Right Image - Higher Position (1/3 offset) */}
+                                <div className="relative">
+                                    <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
+                                        <Image
+                                            src="/hvac.jpeg"
+                                            alt="HVAC Professional"
+                                            fill
+                                            className="object-cover hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Stats Badge - Top Right */}
+                            {/* Stats Badge - Positioned Over Images */}
                             <motion.div
                                 initial={{ scale: 0, opacity: 0 }}
                                 whileInView={{ scale: 1, opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5, type: "spring" }}
-                                className="absolute bottom-1/4 -right-20 z-20 bg-white rounded-2xl shadow-xl p-6 text-center"
+                                className="absolute -bottom-8 left-1/2 -translate-x-1/2 md:bottom-8 md:left-auto md:right-1/3 md:translate-x-1/4 z-20 bg-white rounded-2xl shadow-xl p-6 text-center"
                             >
                                 <div className="text-4xl font-bold text-gray-900">1700k+</div>
                                 <div className="text-sm text-gray-600 font-medium">
-                                    Air Conditioning Happy Customer
+                                    Happy Customers
                                 </div>
                             </motion.div>
-
                         </div>
                     </motion.div>
                 </div>

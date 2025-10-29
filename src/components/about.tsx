@@ -100,7 +100,7 @@ export default function AboutSection() {
                             className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight"
                             variants={fadeInUp}
                         >
-                            The Experts You Can Trust for All Your HVAC Needs
+                            The Plumbers You Can Rely On for Every Job
                         </motion.h2>
 
                         {/* Description */}
@@ -108,9 +108,7 @@ export default function AboutSection() {
                             className="text-gray-600 text-lg leading-relaxed"
                             variants={fadeInUp}
                         >
-                            From installation and maintenance to repairs, we provide exceptional comfort,
-                            reliability, and quality in every home and business we serve. With years of
-                            experience in the industry, our team is driven to excellence.
+                            From leak repairs and drain cleaning to full system installations, we deliver dependable plumbing solutions for homes and businesses alike. With years of hands-on experience, our team ensures every project is done right with precision, care, and lasting quality.
                         </motion.p>
 
                         {/* Features */}
@@ -128,7 +126,7 @@ export default function AboutSection() {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-gray-900">Your Trusted HVAC Partner</h3>
+                                    <h3 className="font-semibold text-gray-900">Your Trusted Plumbing Partner</h3>
                                 </div>
                             </motion.div>
 
@@ -142,7 +140,7 @@ export default function AboutSection() {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-gray-900">Delivering Unmatched Comfort</h3>
+                                    <h3 className="font-semibold text-gray-900">Delivering Reliable Flow & Function</h3>
                                 </div>
                             </motion.div>
                         </motion.div>
@@ -150,14 +148,12 @@ export default function AboutSection() {
                         {/* Additional Description l*/}
                         {/* Bottom Right Circular Image */}
                         <div className={"flex items-center md:flex-row flex-col gap-2"}>
-                            <HexImage src={"/static/about/plumber2.png"} size={240} radius={600} imageTop={165} />
+                            <HexImage src={"/static/about/plumber2.png"} size={150} radius={600} imageTop={165} />
                             <motion.p
                                 className="text-gray-600 leading-relaxed"
                                 variants={fadeInUp}
                             >
-                                Our commitment to excellence means we're always striving to offer you the best
-                                in heating, cooling, & air quality. Trust us to create comfortable spaces that
-                                enhance your daily life.
+                                Our commitment to excellence means we’re always striving to provide the best in plumbing repair, installation, and maintenance. Trust us to keep your water running smoothly and your home or business operating without interruption.
                             </motion.p>
                         </div>
 

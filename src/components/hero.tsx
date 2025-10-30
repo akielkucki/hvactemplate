@@ -14,7 +14,7 @@ const Hero = () => {
             {/* Background Image with Dark Overlay */}
             <div className="fixed inset-0 -z-10">
                 <div
-                    style={{ backgroundImage: `url('/static/hero/Main.jpeg')` }}
+                    style={{ backgroundImage: `url('/static/hero/main.jpeg')` }}
                     className="absolute inset-0 bg-cover bg-center"
                 />
                 {/* Dark overlay for better text visibility */}

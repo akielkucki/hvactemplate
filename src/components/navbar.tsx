@@ -56,7 +56,7 @@ const Navbar = ({className}: {className?: string}) => {
         function scroll() {
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (currentScroll > scrollY.current + 10) {
+            if (currentScroll > scrollY.current + 5) {
                 setShowNav(false);
             }
             else if (currentScroll < scrollY.current - 2) {
@@ -64,7 +64,7 @@ const Navbar = ({className}: {className?: string}) => {
             }
 
             // Update background state based on scroll position
-            setIsScrolled(currentScroll > 5);
+            setIsScrolled(currentScroll > 6);
 
             scrollY.current = currentScroll <= 0 ? 0 : currentScroll; // avoid negative values
         }
@@ -84,7 +84,7 @@ const Navbar = ({className}: {className?: string}) => {
 
     return (
         <>
-            <nav className={`fixed ${showNav ? "top-0" : window.scrollY > 10 ? "-top-1/2" : "top-0"} transition-all duration-500 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-6 ${isScrolled ? "bg-black/20 backdrop-blur-md" : ""}`}>
+            <nav className={`fixed ${showNav ? "top-0" : window.scrollY > 10 ? "-top-1/2" : "top-0"} transition-all duration-500 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 py-6 ${isScrolled ? "bg-gradient-to-b from-black/30 to-transparent backdrop-blur-md" : ""}`}>
                 {/* Logo */}
                 <div className="flex items-center gap-3">
                     <Link href={"/"} className={"flex items-center justify-center"}>

@@ -12,13 +12,16 @@ const Hero = () => {
             <Navbar />
 
             {/* Background Image with Dark Overlay */}
-            <div className="fixed inset-0 -z-10">
-                <div
-                    style={{ backgroundImage: `url('/static/hero/main.jpeg')` }}
-                    className="absolute inset-0 bg-cover bg-center"
+            <div className=" inset-0">
+                <Image
+                    src="/static/hero/main.jpeg"
+                    alt="Hero background"
+                    fill
+                    className="object-cover fixed w-full h-full"
+                    priority
                 />
                 {/* Dark overlay for better text visibility */}
-                <div className="absolute inset-0 bg-black/45 backdrop-blur-xs" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
             </div>
 
             {/* Hero Section */}
@@ -44,13 +47,13 @@ const Hero = () => {
 
                     {/* Main Heading */}
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight">
-                        Stop Paying for <br/><span className={"text-accent"}>‘Quick Fixes.’</span> We Build Plumbing Systems That Outlast the House.
+                        Stop Paying for <br/><span className={"text-accent"}>'Quick Fixes.'</span> We Build Plumbing Systems That Outlast the House.
                     </h1>
 
                     {/* Company Description */}
                     <div className="mb-6 sm:mb-8 max-w-2xl">
                         <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-                            {`${brand.name} provides expert plumbing solutions across ${brand.area}. Whether you’re dealing with a leak, clog, or need a full system upgrade, our certified plumbers deliver fast, reliable service done right the first time.`}                        </p>
+                            {`${brand.name} provides expert plumbing solutions across ${brand.area}. Whether you're dealing with a leak, clog, or need a full system upgrade, our certified plumbers deliver fast, reliable service done right the first time.`}                        </p>
                     </div>
 
                     {/* Stats */}
@@ -71,25 +74,25 @@ const Hero = () => {
 
                     {/* Call Button */}
                     <a
-                    href={`tel:${phone.url}`}
-                    className="inline-block w-full max-w-md sm:max-w-lg bg-accent hover:bg-accent text-white text-center font-semibold py-3 sm:py-4 px-6 rounded-lg transition-all shadow-lg text-base sm:text-lg"
+                        href={`tel:${phone.url}`}
+                        className="inline-block w-full max-w-md sm:max-w-lg bg-accent hover:bg-accent text-white text-center font-semibold py-3 sm:py-4 px-6 rounded-lg transition-all shadow-lg text-base sm:text-lg"
                     >
                         {phone.display}
-                </a>
+                    </a>
+                </div>
+
+                {/* Right Side - Contact Form */}
+                <div className="hidden lg:block lg:flex-shrink-0 lg:ml-8 lg:w-96 xl:w-[28rem] self-center">
+                    <ContactForm />
+                </div>
+
+                {/* Mobile Contact Form - Shows below hero on mobile */}
+                <div className="flex overflow-hidden min-w-full lg:hidden mt-8">
+                    <ContactForm />
+                </div>
+            </section>
         </div>
-
-{/* Right Side - Contact Form */}
-    <div className="hidden lg:block lg:flex-shrink-0 lg:ml-8 lg:w-96 xl:w-[28rem] self-center">
-        <ContactForm />
-    </div>
-
-{/* Mobile Contact Form - Shows below hero on mobile */}
-    <div className="flex overflow-hidden min-w-full lg:hidden mt-8">
-        <ContactForm />
-    </div>
-</section>
-</div>
-);
+    );
 };
 
 export default Hero;

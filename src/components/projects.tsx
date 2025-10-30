@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import {motion} from "framer-motion";
@@ -98,7 +99,7 @@ const ProjectsSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <div className="text-center">
-                    <button className="group bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2">
+                    <button className="group bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" onClick={() => {window.location.assign( '/gallery')}}>
                         <span>View All Projects</span>
                         <svg
                             className="w-5 h-5 group-hover:translate-x-1 transition-transform"

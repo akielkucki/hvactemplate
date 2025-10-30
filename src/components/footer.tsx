@@ -38,6 +38,9 @@ export default function Footer() {
                             <a href="#process" className="text-neutral-400 hover:text-white transition-colors text-sm">
                                 The Process
                             </a>
+                            <a href="/gallery" className="text-neutral-400 hover:text-white transition-colors text-sm">
+                                The Gallery
+                            </a>
                         </nav>
                     </div>
 

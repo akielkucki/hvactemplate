@@ -79,112 +79,133 @@ const UNSPLASH_ACCESS_KEY = 'sy2-KEwJFB1PaSHhsYjja78eakzVarGes3O-VcpkmHs';
 export const projectsData = [
     {
         heading: "Residential Bathroom Remodel",
-        description: "Complete plumbing installation for a new bathroom, including sink, toilet, shower, and modern fixtures.",
+        description:
+            "Complete plumbing installation for a new bathroom, including sink, toilet, shower, and modern fixtures.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=modern-bathroom-plumbing&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Modern bathroom with plumbing fixtures",
-            },
+            { src: "/projects/1.jpg", alt: "Modern bathroom plumbing installation" },
+            { src: "/projects/2.jpg", alt: "Toilet and sink installation" },
+            { src: "/projects/3.jpg", alt: "Shower fixture plumbing" },
+            { src: "/projects/4.jpg", alt: "Bathroom tile and pipework" },
+            { src: "/projects/5.jpg", alt: "Completed modern bathroom" },
         ],
         size: "small",
     },
     {
         heading: "Kitchen Sink Replacement",
-        description: "Upgraded kitchen sink and faucet with new PEX water lines and garbage disposal installation.",
+        description:
+            "Upgraded kitchen sink and faucet with new PEX water lines and garbage disposal installation.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=plumber-kitchen-sink&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Plumber working under kitchen sink",
-            },
+            { src: "/projects/2.jpg", alt: "Kitchen sink replacement process" },
+            { src: "/projects/3.jpg", alt: "PEX water line connection" },
+            { src: "/projects/4.jpg", alt: "Faucet installation by plumber" },
+            { src: "/projects/5.jpg", alt: "New stainless steel kitchen sink" },
+            { src: "/projects/6.jpg", alt: "Completed kitchen plumbing upgrade" },
         ],
         size: "small",
     },
     {
         heading: "Water Heater Installation",
-        description: "Installed a 50-gallon gas water heater with expansion tank and pressure relief valve.",
+        description:
+            "Installed a 50-gallon gas water heater with expansion tank and pressure relief valve.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=water-heater&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Water heater setup in a utility room",
-            },
+            { src: "/projects/3.jpg", alt: "Gas water heater installation" },
+            { src: "/projects/4.jpg", alt: "Expansion tank and pressure valve setup" },
+            { src: "/projects/5.jpg", alt: "Utility room pipe connections" },
+            { src: "/projects/6.jpg", alt: "Plumber connecting gas line" },
+            { src: "/projects/1.jpg", alt: "Installed water heater system" },
         ],
         size: "small",
     },
     {
         heading: "Sewer Line Replacement",
-        description: "Replaced damaged clay sewer line with PVC piping using trenchless technology for minimal lawn disruption.",
+        description:
+            "Replaced damaged clay sewer line with PVC piping using trenchless technology for minimal lawn disruption.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=sewer-pipe-excavation&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Sewer line excavation",
-            },
+            { src: "/projects/4.jpg", alt: "Sewer line excavation process" },
+            { src: "/projects/5.jpg", alt: "PVC sewer pipe installation" },
+            { src: "/projects/6.jpg", alt: "Plumber inspecting underground piping" },
+            { src: "/projects/1.jpg", alt: "Trenchless sewer repair equipment" },
+            { src: "/projects/2.jpg", alt: "Completed sewer line replacement" },
         ],
         size: "small",
     },
     {
         heading: "Commercial Pipe Fitting",
-        description: "Completed copper pipe installation for a restaurant kitchen with high water demand systems.",
+        description:
+            "Completed copper pipe installation for a restaurant kitchen with high water demand systems.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=copper-pipes-plumbing&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Copper pipe plumbing installation",
-            },
+            { src: "/projects/5.jpg", alt: "Commercial copper pipe installation" },
+            { src: "/projects/6.jpg", alt: "Restaurant plumbing layout" },
+            { src: "/projects/1.jpg", alt: "Plumber soldering copper pipes" },
+            { src: "/projects/2.jpg", alt: "Industrial pipe fittings" },
+            { src: "/projects/3.jpg", alt: "Finished restaurant plumbing system" },
         ],
         size: "small",
     },
     {
         heading: "Emergency Leak Repair",
-        description: "Responded to a burst pipe in a residential basement, repaired and insulated the line to prevent future freezing.",
+        description:
+            "Responded to a burst pipe in a residential basement, repaired and insulated the line to prevent future freezing.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=plumber-water-leak&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Plumber fixing water leak in basement",
-            },
+            { src: "/projects/6.jpg", alt: "Burst pipe repair in basement" },
+            { src: "/projects/1.jpg", alt: "Plumber fixing a leaking pipe" },
+            { src: "/projects/2.jpg", alt: "Insulating water line" },
+            { src: "/projects/3.jpg", alt: "Moisture prevention system setup" },
+            { src: "/projects/4.jpg", alt: "Basement plumbing after repair" },
         ],
         size: "small",
     },
     {
         heading: "Toilet Replacement",
-        description: "Removed old inefficient toilet and installed a new dual-flush water-saving model.",
+        description:
+            "Removed old inefficient toilet and installed a new dual-flush water-saving model.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=modern-toilet&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Modern toilet installation",
-            },
+            { src: "/projects/1.jpg", alt: "Plumber removing old toilet" },
+            { src: "/projects/2.jpg", alt: "Installing new water-saving toilet" },
+            { src: "/projects/3.jpg", alt: "Wax ring and flange setup" },
+            { src: "/projects/4.jpg", alt: "Dual-flush button mechanism" },
+            { src: "/projects/5.jpg", alt: "Completed modern toilet install" },
         ],
         size: "small",
     },
     {
         heading: "Outdoor Spigot Installation",
-        description: "Installed frost-proof outdoor faucet with shutoff valve for garden hose access year-round.",
+        description:
+            "Installed frost-proof outdoor faucet with shutoff valve for garden hose access year-round.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=outdoor-faucet-spigot&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Outdoor garden spigot",
-            },
+            { src: "/projects/2.jpg", alt: "Outdoor faucet installation" },
+            { src: "/projects/3.jpg", alt: "Connecting outdoor water line" },
+            { src: "/projects/4.jpg", alt: "Wall-mounted frost-proof spigot" },
+            { src: "/projects/5.jpg", alt: "Plumber testing outdoor faucet" },
+            { src: "/projects/6.jpg", alt: "Completed exterior plumbing setup" },
         ],
         size: "small",
     },
     {
         heading: "Shower Valve Replacement",
-        description: "Replaced faulty shower valve with a thermostatic mixing valve for precise temperature control.",
+        description:
+            "Replaced faulty shower valve with a thermostatic mixing valve for precise temperature control.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=shower-valve-plumbing&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Shower valve replacement",
-            },
+            { src: "/projects/3.jpg", alt: "Removing old shower valve" },
+            { src: "/projects/4.jpg", alt: "Installing thermostatic mixing valve" },
+            { src: "/projects/5.jpg", alt: "Shower plumbing adjustment" },
+            { src: "/projects/6.jpg", alt: "Testing water pressure and temp" },
+            { src: "/projects/1.jpg", alt: "Finished shower valve install" },
         ],
         size: "small",
     },
     {
         heading: "Basement Bathroom Addition",
-        description: "Installed new drainage, venting, and water lines for a full basement bathroom addition.",
+        description:
+            "Installed new drainage, venting, and water lines for a full basement bathroom addition.",
         images: [
-            {
-                src: `https://api.unsplash.com/photos/random?query=basement-bathroom-plumbing&client_id=${UNSPLASH_ACCESS_KEY}`,
-                alt: "Basement bathroom plumbing installation",
-            },
+            { src: "/projects/4.jpg", alt: "Basement plumbing rough-in" },
+            { src: "/projects/5.jpg", alt: "Drainage and vent pipe setup" },
+            { src: "/projects/6.jpg", alt: "PEX water line installation" },
+            { src: "/projects/1.jpg", alt: "Bathroom framing and pipework" },
+            { src: "/projects/2.jpg", alt: "Completed basement bathroom" },
         ],
         size: "small",
     },
 ];
+

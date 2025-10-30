@@ -41,6 +41,10 @@ const Navbar = () => {
             setIsAnimating(false);
         }, 600);
         if (link === null) return;
+        if (link.charAt(0) === "/") {
+            window.location.href = link;
+            return;
+        }
         document.querySelector(link)?.scrollIntoView({behavior: "smooth",  block: "center" });
     };
 
@@ -49,6 +53,7 @@ const Navbar = () => {
         { href: "#why", text: "WHY US" },
         { href: "#projects", text: "PROJECTS" },
         { href: "#process", text: "PROCESS" },
+        { href: "/gallery", text: "GALLERY" },
     ];
 
     return (

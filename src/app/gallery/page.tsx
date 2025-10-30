@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { Project, projectsData } from "@/lib/info";
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Gallery() {
     // Initialize projects with size property using useMemo to avoid recalculation
@@ -28,9 +29,7 @@ export default function Gallery() {
                     <p className="text-lg text-gray-600">
                         A collection of our best projects. Click on any image to view more details.
                     </p>
-                    <button className={"btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"} onClick={()=> {
-                        window.location.href = '/';
-                    }}>Go Back</button>
+                    <Link href={"/"} className={"btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"}>Go Back</Link>
                 </div>
             </div>
 

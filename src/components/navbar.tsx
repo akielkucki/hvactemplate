@@ -2,6 +2,7 @@
 import React, {useState, useEffect, useMemo} from 'react';
 import Image from "next/image";
 import { brand } from "@/lib/info";
+import Link from "next/link";
 
 const Navbar = () => {
     const { logo, phone } = brand;
@@ -42,7 +43,6 @@ const Navbar = () => {
         }, 600);
         if (link === null) return;
         if (link.charAt(0) === "/") {
-            window.location.href = link;
             return;
         }
         document.querySelector(link)?.scrollIntoView({behavior: "smooth",  block: "center" });
@@ -89,15 +89,19 @@ const Navbar = () => {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center gap-8">
-                {navLinks.map((link) => (
-                    <button
-                    key={link.href}
-                    onClick={() => handleLinkClick(link.href)}
-                    className="text-white hover:text-accent transition-colors font-medium text-sm cursor-pointer"
-                    >
-                {link.text}
-                    </button>
-                    ))}
+                {navLinks.map((link) => {
+
+                    return (link.href.charAt(0) === "/" ? (<Link key={link.href} href={link.href}
+                                                                 className={"text-white hover:text-accent transition-colors font-medium text-sm cursor-pointer"}>{link.text}</Link>)
+                        : <button
+                            key={link.href}
+                            onClick={() => handleLinkClick(link.href)}
+                            className="text-white hover:text-accent transition-colors font-medium text-sm cursor-pointer"
+                        >
+                            {link.text}
+                        </button>)
+                })}
+
                 <a
                 href={`tel:${phone.url}`}
                 className="bg-accent hover:bg-accent/90 text-white font-semibold px-6 py-2.5 rounded-lg transition-all"

@@ -56,10 +56,10 @@ const Navbar = ({className}: {className?: string}) => {
         function scroll() {
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (currentScroll > scrollY.current) {
+            if (currentScroll > scrollY.current + 10) {
                 setShowNav(false);
             }
-            else if (currentScroll < scrollY.current - 20) {
+            else if (currentScroll < scrollY.current - 2) {
                 setShowNav(true);
             }
 

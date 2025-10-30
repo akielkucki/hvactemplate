@@ -57,10 +57,10 @@ const Navbar = ({className}: {className?: string}) => {
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
             if (currentScroll > scrollY.current) {
-                setShowNav(true);
+                setShowNav(false);
             }
             else if (currentScroll < scrollY.current - 20) {
-                setShowNav(false);
+                setShowNav(true);
             }
 
             // Update background state based on scroll position

@@ -25,7 +25,7 @@ export default function Gallery() {
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
             {/* Header */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+                <h1 className="text-4xl md:text-5xl md:mt-20 lg:mt-10 font-bold text-gray-900 mb-3">
                     Gallery
                 </h1>
                 <div className="flex justify-between">

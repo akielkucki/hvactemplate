@@ -111,7 +111,7 @@ const Navbar = ({className}: {className?: string}) => {
                             </div>
                         )}
                     </div>
-                    <span className={`${cn("text-white",className)} text-xl font-bold`}>{brand.name}</span>
+                    <span className={`${cn("text-white", isMenuOpen ? "text-white" : "text-black")} text-xl font-bold`}>{brand.name}</span>
                 </Link>
                 </div>
 
@@ -150,17 +150,17 @@ const Navbar = ({className}: {className?: string}) => {
                     aria-label="Toggle menu"
                 >
           <span
-              className={`block w-7 h-0.5 bg-white transition-all duration-300 ease-out ${
+              className={`block w-7 h-0.5 ${className ? (isMenuOpen ? "bg-white" : "bg-black") : "bg-white"} transition-all duration-300 ease-out ${
                   isMenuOpen ? 'rotate-45 translate-y-0.5' : '-translate-y-2'
               }`}
           />
                     <span
-                        className={`block w-7 h-0.5 bg-white transition-all duration-300 ease-out ${
+                        className={`block w-7 h-0.5 ${className ? (isMenuOpen ? "bg-white" : "bg-black") : "bg-white"} transition-all duration-300 ease-out ${
                             isMenuOpen ? 'opacity-0' : 'opacity-100'
                         }`}
                     />
                     <span
-                        className={`block w-7 h-0.5 bg-white transition-all duration-300 ease-out ${
+                        className={`block w-7 h-0.5 ${className ? (isMenuOpen ? "bg-white" : "bg-black") : "bg-white"} transition-all duration-300 ease-out ${
                             isMenuOpen ? '-rotate-45 translate-y-[-1px]' : 'translate-y-2'
                         }`}
                     />
